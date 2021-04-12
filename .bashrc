@@ -107,11 +107,6 @@ fi
 source ~/.bash-docker.sh
 source ~/.bash-docker-compose.sh
 
-function _update_ps1() {
-    PS1="$($HOME/bin/powerline-go -hostname-only-if-ssh -newline -error $?)"
-    set "?"
-}
+source ~/.bash-prompt.sh
 
-if [ "$TERM" != "linux" ] && [ -f "$HOME/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+#EOF
